@@ -1,8 +1,8 @@
 <template>
   <div class="pull-left header-left">
     <div class="left-icon">
-      <i class="el-icon-s-unfold" @click="handleSliderCollapse" v-if="getSliderCollapse"></i>
-      <i class="el-icon-s-fold" @click="handleSliderCollapse" v-else></i>
+      <i v-if="getSliderCollapse" class="el-icon-s-unfold" @click="handleSliderCollapse" ></i>
+      <i v-else class="el-icon-s-fold" @click="handleSliderCollapse" ></i>
     </div>
     <Breadcrumb/>
   </div>

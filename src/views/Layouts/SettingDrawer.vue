@@ -18,9 +18,6 @@ export default defineComponent({
     }
   },
   methods: {
-    // afterVisibleChange(val: boolean) {
-    //   console.log('visible', val)
-    // },
     openDrawer () {
       this.drawerVisible = true
     }

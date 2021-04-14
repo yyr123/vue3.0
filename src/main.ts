@@ -7,6 +7,9 @@ declare module '@vue/runtime-core' {
   }
 }
 
+// createApp 是vue中的一个函数，衍生出全局的一个app对象
+
+
 import { createApp } from 'vue'
 import router from './router'
 import store, { storeKey } from './store'

@@ -48,8 +48,6 @@ export default defineComponent({
   },
   methods: {
     handleSelect(key) {
-      // console.log(key, keyPath)
-
       this.$router.push({
         path: key
       })
@@ -85,7 +83,6 @@ export default defineComponent({
 .el-menu-vertical-custom:not(.el-menu--collapse) {
   width: 230px;
   border: none;
-  /* min-height: 400px; */
 }
 .logo {
   height: 56px;

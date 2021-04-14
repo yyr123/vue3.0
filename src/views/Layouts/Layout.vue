@@ -2,7 +2,6 @@
 <template>
   <el-container class="layout">
     <el-aside style="width:auto;" class="aside">
-      <!-- <Menus></Menus> -->
       <el-drawer
         v-if="getIsPhoneStatus"
         custom-class="layout-drawer"
@@ -21,13 +20,13 @@
       <el-header class="header clearfix">
         <HeaderContent></HeaderContent>
       </el-header>
-      <!-- <div>11</div> -->
       <NavBar></NavBar>
 
       <el-main style="padding:0;background-color:#fafafc;">
         <el-scrollbar class="scrollbar-layout-main" :native="false" :noresize="true">
           <router-view v-slot="{ Component }">
             <transition name="fadeTran" appear>
+              <!-- 这里是3的语法 -->
               <component :is="Component" />
             </transition>
           </router-view>
@@ -58,8 +57,8 @@ export default defineComponent({
     NavBar
   },
   setup () {
+    // 这里是代替了之前的 created() 组件创建之前
     const store = useStore()
-    
     const setSliderCollapse = () => {
       store.commit(SettingMutationTypes.SET_SLIDER_COLLAPSE)
     }
@@ -81,6 +80,7 @@ export default defineComponent({
   },
   methods: {
     handleDeawerClose () {
+      console.log('关闭当前弹窗')
       this.setSliderCollapse()
     }
   },
