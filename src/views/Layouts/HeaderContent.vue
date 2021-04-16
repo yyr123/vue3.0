@@ -7,6 +7,7 @@
     <Breadcrumb/>
   </div>
   <div class="pull-right header-right">
+    <!-- 是否全屏 -->
     <HeaderFullScreen/>
 
     <el-dropdown size="small" trigger="click" class="dropdown-height-right">

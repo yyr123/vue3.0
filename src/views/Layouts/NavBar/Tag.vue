@@ -45,7 +45,6 @@ export default defineComponent({
         {
           this.closable ? <i class="el-icon-close" onClick={(e) => {
             e.stopPropagation()
-            // e.preventDefault()
             this.onClose && this.onClose(this.tagItem)
           }} /> : null
         }
